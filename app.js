@@ -15,8 +15,12 @@ const hbs = require("hbs");
 
 const app = express();
 
+//AQUI COLOCAMOS EL CONFIG DE LAS SESIONES
+require('./config/session.config')(app)
+
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
 require("./config")(app);
+
 
 // default value for title local
 const projectName = "subastes";
